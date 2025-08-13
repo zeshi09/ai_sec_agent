@@ -1,0 +1,24 @@
+[crawler]
+max_depth = 3
+max_concurrent_requests = 10
+delay_between_requests = 1000         # ms
+user_agent = "SecurityAuditAgent/1.0"
+follow_robots_txt = true
+
+[scanner]
+enable_xss_detection = true
+enable_sqli_detection = true
+enable_lfi_detection = true
+custom_payloads_file = "payloads/custom.txt"
+
+[ollama]
+base_url = "http://localhost:11434"
+model = "llama3"
+timeout = 30
+
+[database]
+url = "postgresql://user:pass@localhost/security_audit"
+
+[reporting]
+output_format = ["json", "html", "pdf"]
+output_directory = "./reports"

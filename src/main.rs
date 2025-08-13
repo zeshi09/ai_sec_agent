@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    ai_agent::start_scan("https://example.com");
 }
